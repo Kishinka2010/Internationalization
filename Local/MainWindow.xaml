@@ -1,0 +1,25 @@
+﻿<Window x:Class="Local.MainWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Local"
+      mc:Ignorable="d" 
+       xmlns:language="clr-namespace:Local.Properties.Langs"
+      d:DesignHeight="450" d:DesignWidth="800"
+       Title="SelectLanguage">
+
+    <StackPanel  Name="Menu" >
+
+        <ComboBox Name="cmb" 
+                  
+                Canvas.Left="140" Canvas.Top="35" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="en"/>
+            <ComboBoxItem Content="rus"/>
+        </ComboBox>
+        <Label Content="{x:Static language:Lang.hello}" FontSize="35" Margin="289,0,-0.4,0" Height="82"/>
+        <Button Content="{x:Static language:Lang.exit}" Click="Button_Click1"  Height="108"/>
+
+
+    </StackPanel>
+</Window>
